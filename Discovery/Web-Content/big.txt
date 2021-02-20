@@ -11,6 +11,7 @@
 .cvs
 .cvsignore
 .forward
+.git
 .history
 .htaccess
 .htpasswd
@@ -10142,6 +10143,7 @@ jojo
 joke
 joker
 jokes
+jolokia
 jomsocial
 jomtubefiles
 jon
@@ -18390,7 +18392,7 @@ translate_static
 translation
 translations
 translator
-transmissio  
+transmissio
 transparent
 transport
 transportation
@@ -19625,6 +19627,7 @@ webnews
 webobjects
 weboffice
 webositespeedup
+webpack.manifest.json
 webpage
 webpages
 webpanel
