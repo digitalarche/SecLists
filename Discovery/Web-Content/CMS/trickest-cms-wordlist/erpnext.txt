@@ -1244,6 +1244,7 @@ erpnext/accounts/services/internal_transfer.py
 erpnext/accounts/services/child_item_update.py
 erpnext/accounts/services/taxes.py
 erpnext/accounts/services/party_validation.py
+erpnext/accounts/services/deferred_accounting.py
 erpnext/accounts/services/exchange_gain_loss.py
 erpnext/accounts/services/__init__.py
 erpnext/accounts/page/__init__.py
@@ -3570,6 +3571,7 @@ erpnext/stock/doctype/delivery_note/delivery_note_list.js
 erpnext/stock/doctype/delivery_note/delivery_note.js
 erpnext/stock/doctype/delivery_note/delivery_note.py
 erpnext/stock/doctype/delivery_note/services/billing_status.py
+erpnext/stock/doctype/delivery_note/services/gl_composer.py
 erpnext/stock/doctype/delivery_note/services/packing.py
 erpnext/stock/doctype/delivery_note/services/__init__.py
 erpnext/stock/doctype/delivery_note/test_delivery_note.py

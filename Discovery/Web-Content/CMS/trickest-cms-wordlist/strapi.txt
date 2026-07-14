@@ -1179,6 +1179,7 @@ packages/core/upload/admin/src/future/pages/Assets/hooks/tests/useFolderNavigati
 packages/core/upload/admin/src/future/pages/Assets/hooks/useFolderNavigation.ts
 packages/core/upload/admin/src/future/pages/Assets/tests/AssetsGrid.test.tsx
 packages/core/upload/admin/src/future/pages/Assets/tests/AssetsTable.test.tsx
+packages/core/upload/admin/src/future/pages/Assets/tests/AssetPreview.test.tsx
 packages/core/upload/admin/src/future/pages/Assets/components/AssetsGrid.tsx
 packages/core/upload/admin/src/future/pages/Assets/components/CreateFolderDialog.tsx
 packages/core/upload/admin/src/future/pages/Assets/components/ImportFromUrlDialog.tsx
@@ -1449,6 +1450,7 @@ packages/core/upload/admin/src/components/TableList/CellContent.tsx
 packages/core/upload/admin/src/components/TableList/TableList.tsx
 packages/core/upload/admin/src/components/TableList/tests/CellContent.test.tsx
 packages/core/upload/admin/src/components/TableList/tests/TableList.test.tsx
+packages/core/upload/admin/src/components/TableList/tests/PreviewCell.test.tsx
 packages/core/upload/admin/src/components/TableList/tests/TableRows.test.tsx
 packages/core/upload/admin/src/components/TableList/PreviewCell.tsx
 packages/core/upload/admin/src/components/EmptyAssets/EmptyAssetGrid.tsx
@@ -1999,6 +2001,7 @@ packages/core/admin/admin/src/translations/zh-Hans.json
 packages/core/admin/admin/src/translations/es.json
 packages/core/admin/admin/src/assets/images/logo-strapi-2022.svg
 packages/core/admin/admin/src/assets/images/icon_offline-cloud.svg
+packages/core/admin/admin/src/utils/getProjectType.ts
 packages/core/admin/admin/src/utils/jwt.ts
 packages/core/admin/admin/src/utils/retryDynamicImport.ts
 packages/core/admin/admin/src/utils/urls.ts
@@ -2020,6 +2023,7 @@ packages/core/admin/admin/src/utils/locales.ts
 packages/core/admin/admin/src/utils/tests/cookies.test.ts
 packages/core/admin/admin/src/utils/tests/users.test.ts
 packages/core/admin/admin/src/utils/tests/urls.test.ts
+packages/core/admin/admin/src/utils/tests/getProjectType.test.ts
 packages/core/admin/admin/src/utils/tests/normalizeAPIError.test.ts
 packages/core/admin/admin/src/utils/tests/strings.test.ts
 packages/core/admin/admin/src/utils/tests/widgetLayout.test.ts
@@ -2151,6 +2155,7 @@ packages/core/admin/admin/src/components/Pagination.tsx
 packages/core/admin/admin/src/components/DescriptionComponentRenderer.tsx
 packages/core/admin/admin/src/components/Providers.tsx
 packages/core/admin/admin/src/components/tests/Table.test.tsx
+packages/core/admin/admin/src/components/tests/Context.test.tsx
 packages/core/admin/admin/src/components/tests/Widget.test.tsx
 packages/core/admin/admin/src/components/tests/Widgets.test.tsx
 packages/core/admin/admin/src/components/tests/LazyOutlet.test.tsx
@@ -2559,6 +2564,7 @@ packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/Blo
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/utils/types.ts
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/BlocksInput.tsx
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/BlocksToolbar.tsx
+packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/tests/BlocksEditor.test.tsx
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/tests/BlocksToolbar.test.tsx
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/tests/mock-schema.ts
 packages/core/content-manager/admin/src/pages/EditView/components/FormInputs/BlocksInput/tests/normalizeBlocksState.test.ts
@@ -3193,7 +3199,10 @@ packages/core/openapi/src/constants.ts
 packages/core/openapi/src/assemblers/index.ts
 packages/core/openapi/src/assemblers/document/index.ts
 packages/core/openapi/src/assemblers/document/info.ts
+packages/core/openapi/src/assemblers/document/query-param-styles.ts
+packages/core/openapi/src/assemblers/document/security.ts
 packages/core/openapi/src/assemblers/document/metadata.ts
+packages/core/openapi/src/assemblers/document/server.ts
 packages/core/openapi/src/assemblers/document/path/path-item/index.ts
 packages/core/openapi/src/assemblers/document/path/path-item/path-item.ts
 packages/core/openapi/src/assemblers/document/path/path-item/operation/operation-id.ts
@@ -3223,11 +3232,13 @@ packages/core/openapi/lint-staged.config.mjs
 packages/core/openapi/.eslintrc.cjs
 packages/core/openapi/README.md
 packages/core/openapi/.npmignore
+packages/core/openapi/__tests__/query-param-styles.test.ts
 packages/core/openapi/__tests__/routes/api-routes-provider.test.ts
 packages/core/openapi/__tests__/routes/plugins-route-provider.test.ts
 packages/core/openapi/__tests__/routes/collector.test.ts
 packages/core/openapi/__tests__/routes/route-matcher.test.ts
 packages/core/openapi/__tests__/operation-assemblers.test.ts
+packages/core/openapi/__tests__/document-assemblers.test.ts
 packages/core/openapi/__tests__/mocks/index.ts
 packages/core/openapi/__tests__/mocks/strapi.mock.ts
 packages/core/openapi/__tests__/mocks/routes-provider.mock.ts
@@ -3332,10 +3343,12 @@ packages/core/strapi/src/node/core/timer.ts
 packages/core/strapi/src/node/core/admin-customisations.ts
 packages/core/strapi/src/node/core/config.ts
 packages/core/strapi/src/node/core/files.ts
+packages/core/strapi/src/node/core/admin-vite-optimize-exclude.ts
 packages/core/strapi/src/node/core/managers.ts
 packages/core/strapi/src/node/core/resolve-module.ts
 packages/core/strapi/src/node/core/linked-packages.ts
 packages/core/strapi/src/node/core/__tests__/dependencies.test.ts
+packages/core/strapi/src/node/core/__tests__/admin-vite-optimize-exclude.test.ts
 packages/core/strapi/src/node/core/__tests__/plugins.test.ts
 packages/core/strapi/src/node/core/__tests__/admin-vite-aliases.test.ts
 packages/core/strapi/src/node/core/__tests__/resolve-module.test.ts
@@ -3788,6 +3801,7 @@ packages/core/core/src/services/document-service/params.ts
 packages/core/core/src/services/document-service/middlewares/index.ts
 packages/core/core/src/services/document-service/middlewares/errors.ts
 packages/core/core/src/services/document-service/middlewares/middleware-manager.ts
+packages/core/core/src/services/document-service/utils/clone-relations.ts
 packages/core/core/src/services/document-service/utils/bidirectional-relations.ts
 packages/core/core/src/services/document-service/utils/populate.ts
 packages/core/core/src/services/document-service/utils/ordered-parallel.ts
@@ -5483,8 +5497,10 @@ tests/api/core/strapi/document-service/clone.test.api.ts
 tests/api/core/strapi/document-service/relations/invisible-relation-republish.test.api.ts
 tests/api/core/strapi/document-service/relations/empty-populate-sort-rest.test.api.ts
 tests/api/core/strapi/document-service/relations/empty-populate-sort-document-service.test.api.ts
+tests/api/core/strapi/document-service/relations/clone-relation-operations.test.api.ts
 tests/api/core/strapi/document-service/relations/basic.test.api.ts
 tests/api/core/strapi/document-service/relations/non-localized-stale-locale.test.api.ts
+tests/api/core/strapi/document-service/relations/clone-nested-relation-operations.test.api.ts
 tests/api/core/strapi/document-service/relations/m2m-order-republish.test.api.ts
 tests/api/core/strapi/document-service/relations/i18n.test.api.ts
 tests/api/core/strapi/document-service/relations/no-dp.test.api.ts
